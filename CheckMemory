@@ -1,0 +1,7 @@
+#!/bin/sh
+
+total="null"
+used="null"
+total=`free -m |grep Mem: |awk '{print $2}'`
+used=`free -m | grep Mem: |awk '{print $3}'`
+echo "已使用 $used/$total MB的記憶體 "
